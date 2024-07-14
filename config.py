@@ -22,8 +22,8 @@ API_HASH = environ.get("API_HASH", "")
 ADMINS = int(environ.get("ADMINS", ""))
 
 # Database Informatio
-DB_URI = environ.get("DB_URI", "")
-DB_NAME = environ.get("DB_NAME", "vjbotz")
+DB_URI = environ.get("DB_URI", "mongodb+srv://aman991932:aman@cluster0.ckuveks.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DB_NAME = environ.get("DB_NAME", "Cluster0")
 
 # Bot Information
 BOT_TOKEN = environ.get("BOT_TOKEN", "")
