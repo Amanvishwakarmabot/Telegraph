@@ -31,7 +31,7 @@ from Av import web_server
 
 import asyncio
 from pyrogram import idle
-from plugins.commands import restart_bots
+from Av.aman import restart_bots
 from Av.bot import StreamBot
 from Av.utils.keepalive import ping_server
 from Av.bot.clients import initialize_clients
