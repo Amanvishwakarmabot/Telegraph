@@ -27,7 +27,7 @@ from Script import script
 from datetime import date, datetime 
 import pytz
 from aiohttp import web
-from Av.__init__ import web_server
+from Av import web_server
 
 import asyncio
 from pyrogram import idle
