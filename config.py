@@ -32,3 +32,28 @@ PICS = (environ.get('PICS', 'https://graph.org/file/82ef767ffebe3a948e476.jpg'))
 
 # Channel Information
 LOG_CHANNEL = int(environ.get("LOG_CHANNEL", ""))
+
+
+class Var(object):
+    MULTI_CLIENT = False
+    name = str(getenv('name', 'filetolinkvjbot'))
+    SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
+    WORKERS = int(getenv('WORKERS', '4'))
+    BIN_CHANNEL = int(getenv('BIN_CHANNEL', ''))
+    PORT = int(getenv('PORT', 8080))
+    BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
+    PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
+    NO_PORT = bool(getenv('NO_PORT', False))
+    APP_NAME = None
+    if 'DYNO' in environ:
+        ON_HEROKU = True
+        APP_NAME = str(getenv('APP_NAME'))
+    
+    else:
+        ON_HEROKU = False
+    FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
+    HAS_SSL=bool(getenv('HAS_SSL',False))
+    if HAS_SSL:
+        URL = ""
+    else:
+        URL = ""
