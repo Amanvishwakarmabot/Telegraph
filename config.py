@@ -17,26 +17,26 @@ def is_enabled(value, default):
         return default
       
 # Owner Information
-API_ID = int(environ.get("API_ID", ""))
-API_HASH = environ.get("API_HASH", "")
-ADMINS = int(environ.get("ADMINS", ""))
+API_ID = int(environ.get("API_ID", "12380656"))
+API_HASH = environ.get("API_HASH", "d927c13beaaf5110f25c505b7c071273")
+ADMINS = int(environ.get("ADMINS", "5977931010"))
 
 # Database Informatio
 DB_URI = environ.get("DB_URI", "mongodb+srv://aman991932:aman@cluster0.ckuveks.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DB_NAME = environ.get("DB_NAME", "Cluster0")
 
 # Bot Information
-BOT_TOKEN = environ.get("BOT_TOKEN", "")
-BOT_USERNAME = environ.get("BOT_USERNAME", "") # your bot username without @
+BOT_TOKEN = environ.get("BOT_TOKEN", "7232006758:AAGV-HPIfJi3k-gz2_YR6_-1k7706NEPD-I")
+BOT_USERNAME = environ.get("BOT_USERNAME", "AV_ADVANCE_BOT") # your bot username without @
 PICS = (environ.get('PICS', 'https://graph.org/file/82ef767ffebe3a948e476.jpg')).split() # Bot Start Picture
 
 # Channel Information
-LOG_CHANNEL = int(environ.get("LOG_CHANNEL", ""))
+LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "-1002114619001"))
 
 
 class Var(object):
     MULTI_CLIENT = False
-    name = str(getenv('name', 'filetolinkvjbot'))
+    name = str(getenv('name', 'AV_ADVANCE_BOT'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))
     BIN_CHANNEL = int(getenv('BIN_CHANNEL', ''))
