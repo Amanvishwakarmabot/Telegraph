@@ -27,7 +27,6 @@ from Script import script
 from datetime import date, datetime 
 import pytz
 from aiohttp import web
-from Av.server import web_server
 
 import asyncio
 from pyrogram import idle
@@ -35,6 +34,7 @@ from Av.aman import restart_bots
 from Av.bot import StreamBot
 from Av.utils.keepalive import ping_server
 from Av.bot.clients import initialize_clients
+from Av.server import web_server
 
 ppath = "plugins/*.py"
 files = glob.glob(ppath)
