@@ -27,11 +27,11 @@ from Script import script
 from datetime import date, datetime 
 import pytz
 from aiohttp import web
-from Av.server import web_server
+from Av.__init__ import web_server
 
 import asyncio
 from pyrogram import idle
-from plugins.clone import restart_bots
+from plugins.command import restart_bots
 from Av.bot import StreamBot
 from Av.utils.keepalive import ping_server
 from Av.bot.clients import initialize_clients
@@ -43,7 +43,7 @@ loop = asyncio.get_event_loop()
 
 async def start():
     print('\n')
-    print('Initalizing Tech VJ Bot')
+    print('Initalizing AV Bot')
     bot_info = await StreamBot.get_me()
     StreamBot.username = bot_info.username
     await initialize_clients()
@@ -57,7 +57,7 @@ async def start():
             load = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(load)
             sys.modules["plugins." + plugin_name] = load
-            print("Tech VJ Imported => " + plugin_name)
+            print("AV bot Imported => " + plugin_name)
     if Var.ON_HEROKU:
         asyncio.create_task(ping_server())
     me = await StreamBot.get_me()
